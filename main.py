@@ -43,16 +43,30 @@ def regularSearch(header, order):
     result = df.sort_values(header, ascending=order)
     print(result)
 
+def randSearch(query):
+    # USING FOR LOOP SO IT SEARCHES THROUGH EVERY FIELD, IF IT COULD SEARCH THROUGH ENTIRE DF THATD BE BETTER
+    for field in fieldnames:
+        new_df = df[df[field].str.contains(query, na=False)]
+        new_df = new_df.sort_values('Username', ascending=True)
+        if(new_df.shape[0] != 0):
+            print(new_df)
+
+#    new_df = df[df['Username'].str.contains('z', na=False)] SEARCHES FOR CONTAINING STRING IN DF
+#    new_df = new_df.sort_values('Username', ascending=True) SORTS NEW DF ON USERNAME
+#    print(new_df) PRINTS IT
+
+
 
 # up()
 # search("RP", 200, "more")
 load()
-header = input("Enter header\n")
-queryValue = input("Enter query\n")
-numeration = input("More/Less\n")
-order = input("Ascending/Descending (A/D)\n")
-if(header == 'BE' or header == 'RP' or 'Level' or 'Champs' or 'Skins'):
-    print(numericalSearch(header, queryValue, numeration, order))
-else:
-    regularSearch(header, order)
+randSearch("Unverif")
+#header = input("Enter header\n")
+#queryValue = input("Enter query\n")
+#numeration = input("More/Less\n")
+#order = input("Ascending/Descending (A/D)\n")
+#if(header == 'BE' or header == 'RP' or 'Level' or 'Champs' or 'Skins'):
+#    print(numericalSearch(header, queryValue, numeration, order))
+#else:
+#    regularSearch(header, order)
 
