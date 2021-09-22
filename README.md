@@ -1,5 +1,6 @@
 # League of legends account csvReader
 With main.py and parser.py in the same directory, run main.py and input your CSV file name or path
+you should see the message "Welcome to LolSearch", type '-help' to get started.
 
 # CSV File specifications
 File must have fields in this order
