@@ -1,5 +1,5 @@
 # League of legends account csvReader
-With main.py and parser.py in the same directory input file your CSV file name or path
+With main.py and parser.py in the same directory, run main.py and input your CSV file name or path
 
 # CSV File specifications
 File must have fields in this order
