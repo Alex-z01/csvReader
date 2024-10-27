@@ -8,5 +8,3 @@ File must have fields in this order:
 'Email', 'Summoner Name', 'BE', 'RP', 'RP Refunds',
 'Level', 'Curr Rank', 'Prev Rank', 'Champs', 'Skins', 
 'Last Played'
-
-# Will release customizable fields option soon
